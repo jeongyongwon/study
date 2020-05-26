@@ -40,8 +40,6 @@ foo();
 
 만약 <code>Block Level Scope</code>였다면 <code>var color</code>는 if문이 끝날때 파괴되었을 것이다.
 
-<strong>
-
 ##### Block Level Scope
 
 <code>let, const</code>는 Block Level Scope 변수를 만든다.
