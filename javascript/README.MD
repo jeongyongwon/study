@@ -4,12 +4,12 @@
 
 ### 함수 선언식과 함수표현식
 
-```
+```js
 //fucntion declarartion
 function test() {}
 
 //function expression
-const test = () => {}
+const test = () => {};
 ```
 
 함수 선언식은 선언 이전에 <code>Hoisting</code> 된다.
@@ -24,16 +24,18 @@ Closure = 함수 + 함수를 둘러싼 환경 (Lexical Enviroment)
 
 #### Scope Level
 
+Function level Scope VS Block Level Scope
+
 ##### Function Level Scope
 
 var 키워드로 선언된 함수 & 함수 선언식으로 만들어진 함수는 <code>Function Level Scope</code>를 갖는다.
 
-```
+```js
 function foo() {
-    if (true) {
-        var color = 'blue';
-    }
-    console.log(color); // blue
+  if (true) {
+    var color = "blue";
+  }
+  console.log(color); // blue
 }
 foo();
 ```
@@ -44,13 +46,13 @@ foo();
 
 <code>let, const</code>는 Block Level Scope 변수를 만든다.
 
-```
+```js
 function foo() {
-    if(true) {
-        let color = 'blue';
-        console.log(color); // blue
-    }
-    console.log(color); // ReferenceError: color is not defined
+  if (true) {
+    let color = "blue";
+    console.log(color); // blue
+  }
+  console.log(color); // ReferenceError: color is not defined
 }
 foo();
 ```
