@@ -19,32 +19,32 @@ MVC => 유저 interaction이 많고 거대한 app에 적합하지 않음
 ### Render
 
 - <strong>1. constructor</strong>
-  set initial state.
-  <br> this.state
+  <br/>set initial state.
+  <br/> this.state
 
 - <strong>2. static getDerivedStateFromProps</strong>
-  if props changes, change related state.
-  <br> Why is it 'static'? because no access to 'this'
+  <br/>if props changes, change related state.
+  <br/> Why is it 'static'? because no access to 'this'
 
 * <strong>3. render</strong>
-  mandatory.
+  <br/>mandatory.
 
 - <strong>4. componentDidMount</strong>
 
-### Re-r<strong>ender
+### Re-render
 
 - <strong>1. static getDerivedStateFromProps</strong>
 
 * <strong>2. shouldComponentUpdate</strong>
-  why it exist? need decision.
+  <br/> why it exist? need decision.
   <br/> this component need to be updated or not
   <br/> returns true or false
-  <code>If it's false, followed lifecycles will not be executed.</code>
+  <br/><code>If it's false, followed lifecycles will not be executed.</code>
 
 - <strong>3. render</strong>
 
 - <strong>4. getSnapshotBeforeUpdate</strong>
-  pre commit phase.
+  <br/>pre commit phase.
 
 * <strong>5. componentDidUpdate</strong>
 
