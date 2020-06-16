@@ -63,7 +63,6 @@ foo();
 
 the strange word "Lexical"
 <br/>“Having to do with the words you(the programmer) typed when you defined the function.” Another useful tidbit is, “A function doesn’t care where it was invoked, only where it was defined.”
-<br> 어디서 정의되었을때를 제외하고 어디서 불러오든지 상관 X
 
 ```js
 const num = 6;
