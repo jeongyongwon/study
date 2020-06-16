@@ -168,6 +168,19 @@ printAll();
 
 ### ES6
 
+- Arrow function expression
+- Classes
+- Destructuring
+- Rest, Spread Operator
+- Symbols
+- Promise
+- let, const
+- Template String `${expression}`
+
 ### ES7
 
+- Array.prototype.includes()
+
 ### ES8
+
+- Async Await
