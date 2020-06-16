@@ -59,7 +59,56 @@ foo();
 
 <code>let color</code>를 if 블록 밖에서 참조하면 에러가 발생한다.
 
-#### Lexical Scope
+#### Lexical Scope (=Static Scope)
+
+the strange word "Lexical"
+<br/>“Having to do with the words you(the programmer) typed when you defined the function.” Another useful tidbit is, “A function doesn’t care where it was invoked, only where it was defined.”
+<br> 어디서 정의되었을때를 제외하고 어디서 불러오든지 상관 X
+
+```js
+const num = 6;
+
+function one() {
+  console.log("inside one and num is ", num);
+}
+
+function two() {
+  const num = 3;
+
+  one();
+}
+
+two(); // "inside one and num is 6"
+```
+
+```js
+function one() {
+  console.log("inside one and num is ", num);
+}
+
+function two() {
+  const num = 3;
+
+  one();
+}
+
+two(); // Error: num is not defined
+// one이 선언될 당시에는 num에 대한 정보가 전혀없음
+```
+
+```js
+function two() {
+  const num = 3;
+  function one() {
+    console.log("inside one and num is ", num);
+  }
+  one();
+}
+
+two(); // "inside one and num is 3"
+// num이 정의되었을때 closure를 통해 two안에있는
+// num에 접근할수 있기에 3을 출력할 수 있다
+```
 
 ## Promise
 
