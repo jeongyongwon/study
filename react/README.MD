@@ -14,6 +14,28 @@ MVC => 유저 interaction이 많고 거대한 app에 적합하지 않음
 
 ### Reusable elements
 
+## Why do we use arrow functions in react?
+
+class Propery vs class Method
+
+```js
+class App extends Components {
+  state = {
+    loggedIn: false,
+  };
+  loginHandle = () => {
+    this.setState((prevState) => ({
+      loggedIn: !prevState.loggedIn,
+    }));
+  };
+  render () {
+      return (<div>...<div>)
+  }
+}
+```
+
+In above code, <code>loginHandle</code> is actually not a method, it's a property.
+
 ## React Lifecycle
 
 ### Render
@@ -48,10 +70,29 @@ MVC => 유저 interaction이 많고 거대한 app에 적합하지 않음
 
 * <strong>5. componentDidUpdate</strong>
 
-## 타 라이브러리와 다른점
+### componentWillUnmount
+
+It's not in render or re-render.
+<br/>Makes side effects when component did unmount.
+
+### How to prevent components from re-rendering?
+
+Can prevent in 3 ways.
+
+- <strong>shouldComponentUpdate()</strong>
+- <strong>React.PureComponent</strong>
+- <strong>React.memo(In functional component)</strong>
+  If input is same, not calculate and return same result.
+
+## Explain Error Boundaries?
+
+- <strong>state getDerivedStateFromError</strong>
+- <strong>componentDidCatch</strong>
 
 ## Redux
 
 ### Redux를 사용하는이유
 
 react => 단방향 바인딩, redux => 양방향 바인딩
+
+## 타 라이브러리와 다른점
