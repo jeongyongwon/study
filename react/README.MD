@@ -7,6 +7,7 @@ MVC => 유저 interaction이 많고 거대한 app에 적합하지 않음
 ### Simplicity
 
 간단하다. JSX를 활용해서 접근이 어렵지 않다.
+<br/> Angular comes as huge package.
 
 ### Developers love it
 
@@ -82,17 +83,85 @@ Can prevent in 3 ways.
 - <strong>shouldComponentUpdate()</strong>
 - <strong>React.PureComponent</strong>
 - <strong>React.memo(In functional component)</strong>
-  If input is same, not calculate and return same result.
+  <br/>If input is same, not calculate and return same result.
 
 ## Explain Error Boundaries?
 
 - <strong>state getDerivedStateFromError</strong>
 - <strong>componentDidCatch</strong>
 
-## Redux
+## Best Lifecycle Method for making API calls?
 
-### Redux를 사용하는이유
+In componentDidMount. => It says DOM is ready.
 
-react => 단방향 바인딩, redux => 양방향 바인딩
+## React Patterns
 
-## 타 라이브러리와 다른점
+- <strong>context-api pattern</strong>
+  <br/>Provider VS Consumer
+- <strong>render props</strong>
+- <strong>presentation component pattern</strong>
+  <br/>A component that's primary job is to presentation.
+  <br/>They're written as statless functional components.
+
+## What is css-in-js pattern?
+
+## Why can't you update state directly without setState()?
+
+SetState always trigger re-rendering of the component.
+<br/>to change View!
+
+## How many ways you can conditionally render in react?
+
+```js
+if (isLiar) {
+  return <PantsOnFire />;
+} else {
+  return <YourAreNice />;
+}
+```
+
+```js
+{
+  isLiar ? <PantsOnFire /> : <YouAreNice />;
+}
+```
+
+## What is Fragment and why we use it?
+
+## How to do code-splitting in react?
+
+LazyLoading. React.Lazy
+
+## Explain Virtual DOM
+
+Do you know internals of how react works?
+<br/>Manipulating the DOM is expensive.
+<br/>React has DOM tree of it's own. It's virtual DOM.
+
+# Redux
+
+## What are some alternatives to redux?
+
+- <strong>mobX</strong>
+- <strong>apollo client + graphQL</strong>
+- <strong>RxJS</strong>
+
+## Diffrence between redux-saga and redux-thunk
+
+### thunk
+
+```js
+let a = 1;
+AC = () => let a = 1
+```
+
+### saga
+
+```js
+function* generator() {
+  yield doFirst();
+  yield doSecond();
+}
+```
+
+In saga, you can actually cancel action.
