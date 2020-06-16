@@ -110,9 +110,53 @@ two(); // "inside one and num is 3"
 // num에 접근할수 있기에 3을 출력할 수 있다
 ```
 
-## Promise
+## Callback vs Promise vs Async Await
+
+```js
+function printString(string) {
+  setTimeout(() => {
+    console.log(string);
+  }, Math.floor(Math.random() * 100) + 1);
+}
+```
+
+### Callback
+
+```js
+function printAll() {
+  printString("A", () => {
+    printString("B", () => {
+      printString("C", () => {});
+    });
+  });
+}
+printAll();
+```
+
+nesting.. nesting... nesting..
+<br>The problem with callbacks is it creates something called “Callback Hell.” Basically, you start nesting functions within functions within functions, and it starts to get really hard to read the code.
+
+### Promise
+
+```js
+function printAll() {
+  printString("A")
+    .then(() => printString("B"))
+    .then(() => printString("C"));
+}
+printAll();
+```
 
 ### Async Await
+
+```js
+async function printAll() {
+  await printString("A");
+  await printString("B");
+  await printString("C");
+}
+printAll();
+```
 
 ## Call by reference vs Call by value
 
