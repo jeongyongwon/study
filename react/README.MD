@@ -138,6 +138,28 @@ Do you know internals of how react works?
 <br/>Manipulating the DOM is expensive.
 <br/>React has DOM tree of it's own. It's virtual DOM.
 
+# React-Hooks
+
+Hooks are functions that lets you "Hook into" React state and lifecycle features from function components.
+
+## Why react-hooks?
+
+- <strong>Different way of doing the same things.</strong>
+
+- <strong>No more complex lifecycle methods.</strong>
+
+- <strong>Simpler code. No more mapStateToProps, mapDispatchToProps with redux.</strong>
+
+- <strong>Hooking into components is much eaiser.</strong>
+
+## Rules of react hooks?
+
+- <strong>Only call Hooks at the top level.</strong>
+- <strong>Dont call hooks inside loop, conditions, or nested functions.</strong>
+- <strong>Call hooks from React Components or Custom Hooks.</strong>
+
+## Map lifecycle class methods to lifecycle hooks
+
 # Redux
 
 ## What are some alternatives to redux?
