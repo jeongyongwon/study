@@ -36,9 +36,9 @@ MVC => 유저 interaction이 많고 거대한 app에 적합하지 않음
 - <strong>1. static getDerivedStateFromProps</strong>
 
 * <strong>2. shouldComponentUpdate</strong>
-  <br/> why it exist? need decision.
-  <br/> this component need to be updated or not
-  <br/> returns true or false
+  <br/> why it exist? => need for decision making
+  <br/> decide this component need to be updated or not.
+  <br/> returns true or false.
   <br/><code>If it's false, followed lifecycles will not be executed.</code>
 
 - <strong>3. render</strong>
