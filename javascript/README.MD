@@ -105,7 +105,7 @@ function two() {
 }
 
 two(); // "inside one and num is 3"
-// num이 정의되었을때 closure를 통해 two안에있는
+// one이 정의되었을때 closure를 통해 two안에있는
 // num에 접근할수 있기에 3을 출력할 수 있다
 ```
 
@@ -162,6 +162,25 @@ printAll();
 ### Call by reference
 
 ### Call by value
+
+## Event Loop
+
+In JS runtime, heap and stack exist.
+
+- <strong>Heap</strong>
+  <br/>memory allocation
+
+- <strong>call stack</strong>
+  <br/>execution contexts
+
+- <strong>webapis</strong>
+  <br/> get function from call stack
+
+- <strong>task queue</strong>
+  <br/> get cb from webapi if it's done
+
+- <strong>event loop</strong>
+  <br/> If call stack is empty, unshift task queue and push it to call stack
 
 ## Modern JS
 
