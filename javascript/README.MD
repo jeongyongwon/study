@@ -180,7 +180,7 @@ In JS runtime, heap and stack exist.
   <br/> get cb from webapi if it's done
 
 - <strong>event loop</strong>
-  <br/> If call stack is empty, unshift task queue and push it to call stack
+  <br/> If call stack is empty, dequeue a task frm task queue and push it to call stack
 
 ## Modern JS
 

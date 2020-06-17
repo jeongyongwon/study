@@ -1,7 +1,5 @@
 # React
 
-MVC => 유저 interaction이 많고 거대한 app에 적합하지 않음
-
 ## The reason use react
 
 ### Simplicity
@@ -43,7 +41,7 @@ In above code, <code>loginHandle</code> is actually not a method, it's a propert
 
 - <strong>1. constructor</strong>
   <br/>set initial state.
-  <br/> this.state
+  <br/>this.state
 
 - <strong>2. static getDerivedStateFromProps</strong>
   <br/>if props changes, change related state.

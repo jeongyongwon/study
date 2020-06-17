@@ -1,3 +1,1 @@
 # etc
-
-## Processor VS Threads
