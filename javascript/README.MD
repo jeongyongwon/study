@@ -182,6 +182,14 @@ In JS runtime, heap and stack exist.
 - <strong>event loop</strong>
   <br/> If call stack is empty, dequeue a task frm task queue and push it to call stack
 
+## Prototype
+
+- What is Prototype in Javascript?
+  It' just a property every javascript function has that points to an object.
+- It allows us to share instances (save memory!)
+
+## Execution Context
+
 ## Modern JS
 
 ### ES6
